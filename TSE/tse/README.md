@@ -1,6 +1,6 @@
 # CS50: The TSE Project
 
-## Contributers: Akira Murphy and Michael Kilgore _(With lots of help from Professor Kotz)_
+## Contributers: Akira Murphy and Michael Kilgore 
 
 ### Compilation Instructions:
 To compile the entire tse project, type _**make**_ in the tse directory.
@@ -13,86 +13,85 @@ The main modules are:
 * `indexer` which runs through the files created by the crawler and finds which words go where.
 * `querier` which when run and given a query finds which files contain a set of words. 
 
-`.
-├── README.md
-├── querier
-│   ├── TESTING.md
-│   ├── README.md
-│   ├── querier.c
-│   ├── Makefile
-│   ├── fuzzquery.c
-│   ├── DESIGN.md
+```
+tse
 ├── Makefile
-├── lib
-│   ├── memory
-│   │   ├── memory.h
-│   │   ├── memory.c
-│   │   └── Makefile
+├── README.md
+├── common
 │   ├── Makefile
-│   ├── list
+│   ├── common.h
+│   ├── file.c
+│   ├── file.h
+│   ├── web.c
+│   ├── web.h
+│   ├── word.c
+│   └── word.h
+├── crawler
+│   ├── Makefile
+│   ├── README.md
+│   ├── TESTING.md
+│   ├── crawler.c
+│   └── testscript.sh
+├── indexer
+│   ├── DESIGN.md
+│   ├── Makefile
+│   ├── README.md
+│   ├── TESTING.md
+│   ├── expected_outputs
+│   │   ├── index.txt
+│   │   ├── inv_dir.txt
+│   │   ├── no_args.txt
+│   │   ├── sorted_index.txt
+│   │   └── too_many_args.txt
+│   ├── indexer.c
+│   ├── indexsort.awk
+│   ├── indexsort.sh
+│   ├── indextest.c
+│   ├── indextest.sh
+│   ├── myIndex
+│   └── testscript.sh
+├── lib
+│   ├── Makefile
+│   ├── bag
 │   │   ├── Makefile
-│   │   ├── listtest.c
-│   │   ├── list.h
-│   │   └── list.c
-│   ├── indexhelp
-│   │   ├── Makefile
-│   │   ├── indexhelp.h
-│   │   └── indexhelp.c
-│   ├── hashtable
-│   │   ├── Makefile
-│   │   ├── list.h
-│   │   ├── list.c
-│   │   ├── hashtabletest.c
-│   │   ├── hashtable.h
-│   │   └── hashtable.c
-│   ├── cs50ds.h
+│   │   ├── bag.c
+│   │   ├── bag.h
+│   │   ├── bagtest.c
+│   │   └── core.8687
 │   ├── counters
 │   │   ├── Makefile
-│   │   ├── countertest
-│   │   ├── counterstest.c
+│   │   ├── counters.c
 │   │   ├── counters.h
-│   │   └── counters.c
-│   └── bag
+│   │   └── counterstest.c
+│   ├── cs50ds.h
+│   ├── hashtable
+│   │   ├── Makefile
+│   │   ├── hashtable.c
+│   │   ├── hashtable.h
+│   │   ├── hashtabletest.c
+│   │   ├── list.c
+│   │   └── list.h
+│   ├── indexhelp
+│   │   ├── Makefile
+│   │   ├── indexhelp.c
+│   │   └── indexhelp.h
+│   ├── list
+│   │   ├── Makefile
+│   │   ├── list.c
+│   │   ├── list.h
+│   │   └── listtest.c
+│   └── memory
 │       ├── Makefile
-│       ├── bagtest.c
-│       ├── bag.h
-│       └── bag.c
-├── indexer
-│   ├── testscript.sh
-│   ├── TESTING.md
-│   ├── README.md
-│   ├── myIndex
-│   ├── Makefile
-│   ├── indextest.sh
-│   ├── indextest.c
-│   ├── indexsort.sh
-│   ├── indexsort.awk
-│   ├── indexer.c
-│   ├── expected_outputs
-│   │   ├── too_many_args.txt
-│   │   ├── sorted_index.txt
-│   │   ├── no_args.txt
-│   │   ├── inv_dir.txt
-│   │   └── index.txt
-│   ├── DESIGN.md
-│   └── bash_index_test.sh
-├── crawler
-│   ├── testscript.sh
-│   ├── TESTING.md
-│   ├── testDir
-│   ├── README.md
-│   ├── out.txt
-│   ├── Makefile
-│   └── crawler.c
-└── common
-    ├── word.h
-    ├── word.c
-    ├── web.h
-    ├── web.c
+│       ├── memory.c
+│       └── memory.h
+└── querier
+    ├── DESIGN.md
     ├── Makefile
-    ├── file.h
-    ├── file.c
-    └── common.h`
+    ├── README.md
+    ├── TESTING.md
+    ├── fuzzquery.c
+    └── querier.c
+```
 
 ### Usage:
 See each of the individual module's README.md file for usage instructions.
