@@ -1,0 +1,12 @@
+Compilation:
+        The program can either be compiled using the make file or using the fol\
+lowing testing command:
+            gcc -Wall -pedantic -std=c11 -ggdb counters.c counterstest.c -o counterstest
+
+Execution:
+        For testing:
+        The program can then be run like this: ./counterstest
+        Usage: ./counterstest
+
+Assumptions:
+	I assume that the user might pass NULL for a counter, and I deal with that by canceling the execution of the function. I also assume that they user will not attempt to use the counter after deleting it. I wanted to make the counters_delete function take a counters_t **ctrs so I could set it to be NULL after, but I assumed that I was not allowed to depart from the given functions.

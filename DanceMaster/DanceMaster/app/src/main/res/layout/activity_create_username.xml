@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logogreen" />
+
+    <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+        android:id="@+id/create_username_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/create_username_instructions"
+        android:textSize="@dimen/header_font_size"/>
+
+    <com.dancemaster.dancemaster.FancyUI.GoodDogEditText
+        android:id="@+id/create_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username_hint"/>
+
+    <com.dancemaster.dancemaster.FancyUI.GoodDogButton
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:background="@drawable/flower_blue"
+        android:onClick="onSaveUserClicked"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/save" />
+
+</LinearLayout>

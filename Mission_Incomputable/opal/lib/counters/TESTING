@@ -1,0 +1,20 @@
+In order to test the counters module, I created counterstest, a program that creates and increments counters, and then tests the getting method. It gets all the created keys, along with ones that do not exist. Finally, it tests the deletion of the counters. The output:
+
+Successfully created a new counters object
+-----Adding-----
+Successfully added and incremented keys
+----Getting-----
+The key '2' occured 1 times
+The key '3' occured 3 times
+The key '4' does not exist
+The key '5' occured 4 times
+The key '242' occured 2 times
+The key '50002' occured 1 times
+The key '11' occured 1 times
+The key '12' does not exist
+The key '-5' occured 5 times
+----Deleting-----
+Successfully deleted counters
+
+
+I showed using this test program that for any key, large, small, and negative. It shows the ability for it to count the number of times it was inserted. In the end I wanted to be able to prove without a doubt that I indeed freed all the counters, but I could not.

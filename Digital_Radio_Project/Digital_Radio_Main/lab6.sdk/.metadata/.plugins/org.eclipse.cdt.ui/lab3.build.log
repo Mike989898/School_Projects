@@ -1,0 +1,28 @@
+20:48:19 **** Build of configuration Debug for project lab3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../ClpLib.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"ClpLib.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"ClpLib.d" -MT"ClpLib.o" -o "ClpLib.o" "../ClpLib.c"
+'Finished building: ../ClpLib.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: lab3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab3_bsp/ps7_cortexa9_0/lib -o "lab3.elf"  ./ClpLib.o ./main.o ./stl_printf.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab3.elf  |tee "lab3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30096	   2752	  22660	  55508	   d8d4	lab3.elf
+'Finished building: lab3.elf.size'
+' '
+
+20:48:33 Build Finished (took 13s.852ms)
+

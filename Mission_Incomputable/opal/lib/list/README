@@ -1,0 +1,11 @@
+Compilation:
+	The program can either be compiled using the make file or using the following testing command:
+	    gcc -Wall -pedantic -std=c11 -ggdb list.c listtest.c -o listtest
+
+Execution:
+	For testing:
+	The testing program can be run like this: ./listtest
+	Usage: ./listtest
+	
+Assumptions:
+	When I created the module, I assumed that the user might pass me a NULL list, or even a NULL key, and I deal with it by not executing the program they are trying to use. As well, I allow the user to put any data they want into the list.

@@ -1,0 +1,14 @@
+# Object files and libraries
+*.o
+core.*
+log
+*.a
+common/message
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+.DS_Store
+.nfs*

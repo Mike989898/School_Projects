@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+    android:layout="@xml/pref_settings_title" />
+
+    <PreferenceCategory>
+        <PreferenceScreen
+            android:key="@string/profile_key"
+            android:layout="@xml/pref_profile">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.dancemaster.dancemaster.ProfileActivity"
+                android:targetPackage="com.dancemaster.dancemaster" />
+
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@xml/pref_reminder" />
+
+    <CheckBoxPreference
+        android:key="@string/reminder_option_key"
+        android:title="@string/ui_reminder_option_summary"
+        android:layout="@xml/pref_reminder_option" />
+
+    <Preference
+        android:key="@string/reminder_time_key"
+        android:title="@string/ui_reminder_time_summary"
+        android:layout="@xml/pref_reminder_time" />
+
+</PreferenceScreen>

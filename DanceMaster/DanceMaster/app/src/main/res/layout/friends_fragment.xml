@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+        android:id="@+id/friends_page_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/ui_friends_page_title"
+        android:gravity="center"
+        android:textSize="@dimen/header_font_size"/>
+
+    <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+        android:id="@+id/no_friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/friends_page_title"
+        android:text=""
+        android:gravity="center"
+        android:textSize="@dimen/header_font_size"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/friends_page_title"
+        android:layout_above="@+id/add_friend_button"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginRight="@dimen/table_margin"
+        android:layout_marginLeft="@dimen/table_margin">
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/add_friend_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+        <com.dancemaster.dancemaster.FancyUI.GoodDogButton
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/flower_blue"
+            android:text="@string/ui_add_friends_button"
+            android:onClick="onAddFriendsClicked"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dancemaster.dancemaster" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.example.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/dmlogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Video Viewing Activity -->
+        <activity android:name=".Dances.VideoViewingActivity"
+            android:screenOrientation="landscape"/>
+
+        <!-- Dance Video Activity -->
+        <activity
+            android:name=".Dances.DanceVideoActivity"
+            android:configChanges="orientation|screenSize"
+            />
+        <!--android:screenOrientation="landscape" -->
+
+        <!-- Add Friend Activity -->
+        <activity android:name=".SocialServer.AddFriendActivity" />
+
+        <!-- Profile Activity -->
+        <activity android:name=".ProfileActivity" />
+
+        <!-- CropImage Activity from SoundCloud library -->
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+
+        <!-- Create Username Activity -->
+        <activity
+            android:name=".SocialServer.CreateUsernameActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Communicate with server -->
+        <receiver
+            android:name=".SocialServer.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.dancemaster.dancemaster" />
+            </intent-filter>
+        </receiver>
+
+        <!-- To register the phone -->
+        <service android:name=".SocialServer.GcmIntentService" />
+
+        <!-- Receiver to set up alarms -->
+        <receiver android:name=".Reminder.EMAAlarmReceiver" />
+
+    </application>
+
+</manifest>

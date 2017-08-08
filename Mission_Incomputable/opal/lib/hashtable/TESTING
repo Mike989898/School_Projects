@@ -1,0 +1,24 @@
+In order to test the module hashtable, I created the program hashtabletest. It runs through a bunch of tests of the functions, forcing it to be tested on different types of inputs that might end up being edge cases. Output:
+
+Successfully created a new hashtable
+------Inserting------
+Inserted 'a cool dude' into key 'bob'
+Inserted 'can be a pain, which is why I'm writing this program' into key 'testing'
+Inserted 'I'm not entirely sure if thats how you spell it' into key 'pnemonoultramicorscopicsoliconvolcaniconiosus'
+Inserted 'Somedata1' into key 'Anne'
+Inserted 'Somedata2' into key 'Alice'
+Inserted 'Somedata3' into key 'Robert'
+Inserted 'Somedata4' into key 'Micheal'
+Failed to insert 'not a cool dude' into key 'bob'
+------Finding-------
+Found 'a cool dude' in key 'bob'
+Couldn't find key 'jim'
+Found 'I'm not entirely sure if thats how you spell it' in key 'pnemonoultramicorscopicsoliconvolcaniconiosus'
+Found 'can be a pain, which is why I'm writing this program' in key 'testing'
+Found 'Somedata1' in key 'Anne'
+Found 'Somedata2' in key 'Alice'
+Found 'Somedata3' in key 'Robert'
+Found 'Somedata4' in key 'Micheal'
+
+
+With this program I showed the ability to insert a bunch of key value pairs into this module, including ones that are very long, and some that are very similar, to test both the hashing function and the ability to deal with collisions. I also show that a key cannot be inserted more than once. Then I prove that I can retreive all the data, and that I will not be able to find data for keys that do not exist.

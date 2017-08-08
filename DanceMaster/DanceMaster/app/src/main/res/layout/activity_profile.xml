@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1">
+
+        <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prof_photo"
+            android:textSize="@dimen/body_font_size1">
+        </com.dancemaster.dancemaster.FancyUI.GoodDogTextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false" >
+
+            <com.dancemaster.dancemaster.FancyUI.CircleImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_height"
+                android:layout_margin="@dimen/margin"
+                android:layout_weight="1"
+                android:contentDescription="@string/prof_photo"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:civ_border_width="@dimen/profile_border_width"
+                app:civ_border_color="#F12DFF">
+                <requestFocus />
+            </com.dancemaster.dancemaster.FancyUI.CircleImageView>
+
+            <com.dancemaster.dancemaster.FancyUI.GoodDogButton
+                android:id="@+id/btnChangePhoto"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin"
+                android:onClick="onChangePhotoClicked"
+                android:background="@drawable/flower_orange"
+                android:text="@string/change_btn" />
+        </LinearLayout>
+
+        <!-- Name -->
+        <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/name"
+            android:textSize="@dimen/body_font_size1" />
+
+        <com.dancemaster.dancemaster.FancyUI.GoodDogEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/name_edit"
+            android:id="@+id/name" />
+
+        <!-- Username -->
+        <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/username"
+            android:textSize="@dimen/body_font_size1" />
+
+        <com.dancemaster.dancemaster.FancyUI.GoodDogEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/username"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="@string/username" />
+
+        <!-- Email -->
+        <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/email"
+            android:textSize="@dimen/body_font_size1" />
+
+        <com.dancemaster.dancemaster.FancyUI.GoodDogEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:id="@+id/email"
+            android:hint="@string/email_edit" />
+
+        <!-- Gender -->
+        <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/gender"
+            android:textSize="@dimen/body_font_size1" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/gender" >
+            <com.dancemaster.dancemaster.FancyUI.GoodDogRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/female_btn"
+                android:layout_weight="1"
+                android:id="@+id/female_btn"
+                android:buttonTint="@color/button_orange"/>
+
+            <com.dancemaster.dancemaster.FancyUI.GoodDogRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/male_btn"
+                android:layout_weight="1"
+                android:id="@+id/male_btn"
+                android:buttonTint="@color/button_orange"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal">
+
+            <com.dancemaster.dancemaster.FancyUI.GoodDogButton
+                android:id="@+id/save_btn"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/flower_blue"
+                android:layout_marginRight="@dimen/medium_margin"
+                android:onClick="onSaveClicked"
+                android:text="@string/save" />
+
+            <com.dancemaster.dancemaster.FancyUI.GoodDogButton
+                android:id="@+id/cancel_btn"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/flower_blue"
+                android:layout_marginLeft="@dimen/medium_margin"
+                android:onClick="onCancelClicked"
+                android:text="@string/cancel" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

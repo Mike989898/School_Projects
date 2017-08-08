@@ -1,0 +1,216 @@
+/*
+ * This is a *very* simple implementation of a proxy server that relays traffic 
+ * from a client over a WebSocket to a target server over a UDP socket (and back).
+ *
+ * i.e., 
+ *             client  
+ *                    ---WS--> 
+ *                             proxy 
+ *                                   ---UDP--> 
+ *                                             target server
+ *                                             ...
+ *                                             ...(at some later time)...
+ *                                             ...
+ *                                             target server
+ *                                   <--UDP-- 
+ *                             proxy 
+ *                    <--WS--- 
+ *             client 
+ * 
+ * The implementation of this proxy server is based on 'ws'. For a list of other 
+ * implementations of the WebSocket specification, see this Stack Overflow post:
+ * -> http://stackoverflow.com/a/16393046
+ *
+ * Last Modified: Travis Peters, May 2016
+ */
+
+/* -------------------------------------------------------------------------- *
+ *  Utility functions
+ * -------------------------------------------------------------------------- */
+
+var logfilename = 'proxy-log.txt';
+
+// Create a log file and do some manipulations on stdout/stderr.
+var fs = require('fs');
+var util = require('util');
+
+var logFile = fs.createWriteStream(logfilename, { flags: 'w' });
+var logStdout = process.stdout;
+
+// Log to stdout AND to a log file. 
+console.log = function () {
+  logFile.write(util.format.apply(null, arguments) + '\n');
+  logStdout.write(util.format.apply(null, arguments) + '\n');
+}
+console.error = console.log;
+
+// Get a formatted representation of the current time.
+function tm() {
+    var dt = new Date( Date.now() );
+    // var dt = new Date().toLocaleString();
+    return dt;
+}
+
+/* -------------------------------------------------------------------------- *
+ *  Process command line arguments.
+ * -------------------------------------------------------------------------- */
+ 
+var FA2GS = false;  // Print all communications from Client to Target.
+var GS2FA = false;  // Print all communications from Target to Client.
+var ALL = false;    // Print all communications (bi-directional).
+var ACK = false;    // Send ACK(nowledgemnt) back to Client (i.e., Field Agent).
+
+// Quick and dirty command line arg parsing.
+process.argv.forEach( function(val, index, array) {
+    if (val === '-h') {
+        console.log('usage: node proxy.js [-h|-all|-ack|-fa2gs|-gs2fa]\n');
+        console.log('flags:');
+        console.log('  -fa2gs       show all communications from Field Agent to Game Server');
+        console.log('  -gs2fa       show all communications from Game Server to Field Agent');
+        console.log('  -ack         send ACK to message (with original message) back to Field Agent upon receipt at the Unix Proxy');
+        console.log('  -all         show all communications (bidirectional)');
+        console.log('  -h           print this help text');
+        process.exit(0);
+    }
+    if (val === '-all') { // enable all logged output & ACK-ing
+        ALL = true;
+        FA2GS = true;
+        GS2FA = true;
+        ACK = true;
+    }
+    if (val === '-fa2gs')
+        FA2GS = true;
+    if (val === '-gs2fa')
+        GS2FA = true;
+    if (val === '-ack')
+        ACK = true;
+});
+
+/* -------------------------------------------------------------------------- *
+ *  Load server configurations. 
+ * -------------------------------------------------------------------------- */
+
+// A little weird - reach into the pebble app's directory and access the config
+// file that we are giving to students to centrally maintain app config data.
+var config_filename = '../field_agent/appinfo.json';
+
+fs = require('fs')
+var config_file = fs.readFileSync(config_filename);
+try {
+    config = JSON.parse(config_file);
+} catch (err) {
+    console.log('Error parsing your JSON configuration file: \'%s\'.', config_filename)
+    console.log(err);
+    process.exit(-1);
+}
+
+/* -------------------------------------------------------------------------- *
+ *  Setup the WebSocket server & UDP socket.
+ * -------------------------------------------------------------------------- */
+
+// Open WebSocket for listening (client -> proxy)
+var WebSocketServer = require('ws').Server;
+var wss = new WebSocketServer( { port: config.proxyWSSServerPort } );
+
+wss.on('connection', function(ws) {
+    console.log('[%s] new-connection %s:%d (%d active connections)', 
+        tm(), ws._socket.remoteAddress, ws._socket.remotePort, wss.clients.length);
+
+    /* 
+     * Open a UDP Socket for this 'client' socket for bidirectional communications 
+     * with target server (proxy -> target server & target server -> proxy).
+     *
+     * This (one) UDP socket will be used for the duration of this WebSocket 
+     * connection but it will be torn down when this WebSocket connection closes. 
+     */
+    const dgram = require('dgram');
+    const client = dgram.createSocket('udp4');
+
+    // Handle the reception of datagrams over our UDP socket.
+    client.on('message', function(udpInMsg, rinfo) {
+        if (ALL|GS2FA) 
+            console.log('[%s]    <- udp rx: [%d bytes from %s:%d] %s', 
+                tm(), udpInMsg.length, rinfo.address, rinfo.port, udpInMsg);
+
+        // Send the datagram down to client on the other end of this WebSocket. 
+        // ws.send(udpInMsg); // TODO: to string?
+        ws.send(udpInMsg.toString());
+        if (ALL|GS2FA)
+            console.log('[%s] <- wss tx: [%d bytes to %s:%d] %s', 
+                tm(), udpInMsg.length, addr, port, udpInMsg);
+    });
+
+    // Handle the reception of messages from the connected client over a WebSocket.
+    ws.on('message', function(wsInMsg) {
+        /*
+         * Reception of data over WebSocket (i.e., from Pebble client). Now pass 
+         * along to the target server over UDP.
+         */
+        addr  = ws._socket.remoteAddress;
+        port  = ws._socket.remotePort;
+        if (ALL|FA2GS) 
+            console.log('[%s] -> wss rx: [%d bytes from %s:%d] %s', 
+                tm(), wsInMsg.length, addr, port, wsInMsg);
+
+        //////////////////////////////////////////////////////////////////
+        // ***NEW*** Send an ACK back to confirm reception of the message. 
+        if (ALL|ACK) {
+            setTimeout(function() {
+                var ackMsg = 'ACK ' + wsInMsg;
+                console.log('[%s] <- wss ack: %s', tm(), ackMsg);
+                ws.send(ackMsg); 
+            });
+        }
+        //////////////////////////////////////////////////////////////////
+
+        // Send client message to the target server as a datagram.
+        var bufferedMsg = new Buffer(wsInMsg);
+        client.send(bufferedMsg, 0, bufferedMsg.length, config.targetServerPort, config.targetServerURL, function(err, bytes) {
+            if (err) 
+                throw err;
+            if (ALL|FA2GS) 
+                console.log('[%s]    -> udp tx: [%d bytes to %s:%d] %s', 
+                    tm(), wsInMsg.length, config.targetServerURL, config.targetServerPort, wsInMsg);
+        });
+    });
+
+    // Error handling...
+    ws.on('error', function onWsError(event) {
+        console.error('Oops! Client %s:%d error: %s', ws._socket.remoteAddress, ws._socket.remotePort, event);
+        ws.terminate();
+    });
+
+    // Clean-up WebSocketServer data structure for clients on a closed WebSocket connection.
+    ws.onclose = function(event) { 
+        var rAddr = ws._socket.remoteAddress;
+        var rPort = ws._socket.remotePort;
+        var index = wss.clients.indexOf(ws);
+        if (index != -1) {
+            wss.clients.splice(index, 1);
+        }
+        console.log('[%s] connection-closed %s:%d (%d active connections)', 
+            tm(), rAddr, rPort, wss.clients.length);
+    };
+});
+
+/* -------------------------------------------------------------------------- *
+ *  Report host/port info for the configured proxy.
+ * -------------------------------------------------------------------------- */
+
+require('dns').lookup(require('os').hostname(), function (err, addr, fam) {
+    if (err) {
+        console.log('\n*************************************************************************');
+        console.log('Oops! got error \'' + err + '\' - i.e., the');
+        console.log('upstream DNS server replied that there are no matching records.\n');
+        console.log('Try running proxy on a machine that has a publicly routable IP address.');
+        console.log('*************************************************************************\n');
+
+        // Try to get IP on local network.
+        addr = require('os').networkInterfaces().en0[1].address; // addr = '0.0.0.0';
+        // throw err;
+    }
+    console.log('Proxy Server Up! (modes: all='+ALL+', fa2gs='+FA2GS+', gs2fa='+GS2FA+', ack='+ACK+')');
+    console.log(' + proxy web socket: %s:%d (%s:%d)', require('os').hostname(), wss.options.port, addr, wss.options.port);
+    console.log(' + proxy udp socket: %s:%d', config.targetServerURL, config.targetServerPort);
+    console.log('\nIf this is not the desired configuration please update the proxy/game\nserver settings in your project\'s `appinfo.json` file.\n');
+})

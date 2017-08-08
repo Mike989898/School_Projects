@@ -1,0 +1,8 @@
+# Ignore build generated files
+build
+
+# Ignore waf lock file
+.lock-waf*
+
+# Custom generated file for Mission Incomputable
+**/src/js/appinfo.js

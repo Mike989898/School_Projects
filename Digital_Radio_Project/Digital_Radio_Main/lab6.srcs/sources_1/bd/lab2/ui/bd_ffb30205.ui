@@ -1,0 +1,106 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.12  2016-01-29 bk=1.3547 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port btns_4bits -pg 1 -y 210 -defaultsOSRD
+preplace port DDR -pg 1 -y 20 -defaultsOSRD
+preplace port ad1_spi_sclk -pg 1 -y 450 -defaultsOSRD
+preplace port da2_spi_sclk -pg 1 -y 810 -defaultsOSRD
+preplace port sws_4bits -pg 1 -y 230 -defaultsOSRD
+preplace port da2_spi_syncL -pg 1 -y 830 -defaultsOSRD
+preplace port CLP_CONTROL -pg 1 -y 100 -defaultsOSRD
+preplace port ad1_spi_syncL -pg 1 -y 470 -defaultsOSRD
+preplace port da2_spi_mosi1 -pg 1 -y 850 -defaultsOSRD
+preplace port da2_spi_mosi2 -pg 1 -y 870 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 160 -defaultsOSRD
+preplace port ad1_spi_miso1 -pg 1 -y 400 -defaultsOSRD
+preplace port ad1_spi_miso2 -pg 1 -y 420 -defaultsOSRD
+preplace port CLP_DATA -pg 1 -y 80 -defaultsOSRD
+preplace port Clk125 -pg 1 -y 380 -defaultsOSRD
+preplace inst DDS|DDSclocking_0 -pg 1 -lvl 1 -y 412 -defaultsOSRD
+preplace inst pmod_ad1_0 -pg 1 -lvl 11 -y 430 -defaultsOSRD
+preplace inst DDS -pg 1 -lvl 10 -y 392 -defaultsOSRD
+preplace inst Processor -pg 1 -lvl 9 -y 190 -defaultsOSRD
+preplace inst Q -pg 1 -lvl 1 -y 830 -defaultsOSRD
+preplace inst FIR -pg 1 -lvl 6 -y 526 -defaultsOSRD
+preplace inst Q1 -pg 1 -lvl 4 -y 650 -defaultsOSRD
+preplace inst I1 -pg 1 -lvl 4 -y 570 -defaultsOSRD
+preplace inst demodulator_0 -pg 1 -lvl 8 -y 810 -defaultsOSRD
+preplace inst pmod_da2_0 -pg 1 -lvl 11 -y 840 -defaultsOSRD
+preplace inst shifter_0 -pg 1 -lvl 2 -y 750 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 10 -y 1084 -defaultsOSRD
+preplace inst CIC -pg 1 -lvl 5 -y 612 -defaultsOSRD
+preplace inst cmpy_0 -pg 1 -lvl 11 -y 630 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 10 -y 230 -defaultsOSRD
+preplace inst shifter_1 -pg 1 -lvl 2 -y 830 -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 3 -y 760 -defaultsOSRD
+preplace inst DDS|s_axis_mm2s_0 -pg 1 -lvl 1 -y 592 -defaultsOSRD
+preplace inst axi_gpio_clp -pg 1 -lvl 10 -y 90 -defaultsOSRD
+preplace inst I -pg 1 -lvl 1 -y 750 -defaultsOSRD
+preplace inst downsampler -pg 1 -lvl 7 -y 740 -defaultsOSRD
+preplace inst DDS|dds_compiler_0 -pg 1 -lvl 2 -y 602 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 9 3 NJ 20 NJ 20 NJ
+preplace netloc shifter_0_data_out 1 2 1 NJ
+preplace netloc pmod_ad1_0_spi_sclk 1 11 1 NJ
+preplace netloc Processor_M02_AXI 1 9 1 N
+preplace netloc CIC_data_out_tvalid 1 5 6 1460 620 NJ 620 NJ 620 NJ 620 NJ 830 NJ
+preplace netloc xlslice_1_Dout 1 4 1 NJ
+preplace netloc DDS|DDSclocking_0_DDS_aclk 1 0 3 4184 502 4424 522 NJ
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 9 1 3940
+preplace netloc downsampler_data_out_full1 1 7 1 2980
+preplace netloc downsampler_clk12khz 1 7 4 3010 730 NJ 730 NJ 770 4890
+preplace netloc pmod_da2_0_spi_syncL 1 11 1 NJ
+preplace netloc Clk125_1 1 0 10 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ
+preplace netloc pmod_ad1_0_m_axis_ad1_tdata 1 0 12 10 700 NJ 700 NJ 700 NJ 710 NJ 710 NJ 610 NJ 600 NJ 600 NJ 600 NJ 730 NJ 730 5380
+preplace netloc pmod_ad1_0_spi_syncL 1 11 1 NJ
+preplace netloc spi_miso2_1 1 0 11 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ
+preplace netloc pmod_da2_0_spi_mosi1 1 11 1 NJ
+preplace netloc xlconcat_1_dout 1 3 8 N 760 NJ 760 NJ 760 NJ 850 NJ 720 NJ 720 NJ 720 NJ
+preplace netloc cmpy_0_m_axis_y_tvalid 1 4 8 1090 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 5360
+preplace netloc spi_miso1_1 1 0 11 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ
+preplace netloc pmod_da2_0_spi_mosi2 1 11 1 NJ
+preplace netloc Processor_M01_AXI 1 9 1 3920
+preplace netloc demodulator_0_data_out 1 8 2 NJ 810 3890
+preplace netloc FIR_x_out1 1 6 1 2020
+preplace netloc CIC_en960R_out 1 5 1 1420
+preplace netloc downsampler_data_out_full 1 7 1 2990
+preplace netloc Q_Dout 1 1 1 NJ
+preplace netloc downsampler_data_out1 1 7 3 2960 690 NJ 690 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 9 2 3950 760 4920
+preplace netloc DDSclocking_0_DDS_aclk 1 4 7 1110 720 NJ 720 2010 830 NJ 710 NJ 710 NJ 710 4890
+preplace netloc axi_gpio_0_GPIO1 1 10 2 NJ 210 NJ
+preplace netloc pmod_ad1_0_m_axis_ad1_tvalid 1 10 2 4930 520 5360
+preplace netloc xlconcat_0_dout 1 10 1 4930
+preplace netloc DDS|s_axis_mm2s_0_M00_AXIS 1 1 1 N
+preplace netloc DDS|DDSclocking_0_clk125mhz 1 1 2 N 432 NJ
+preplace netloc axi_gpio_0_GPIO2 1 10 2 NJ 100 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 9 3 NJ 160 NJ 160 NJ
+preplace netloc DDS_M_AXIS_DATA 1 10 1 4900
+preplace netloc cmpy_0_m_axis_y_tdata 1 3 9 NJ 700 NJ 700 NJ 640 NJ 640 NJ 640 NJ 640 NJ 750 NJ 740 5370
+preplace netloc axi_gpio_0_GPIO3 1 10 2 NJ 230 NJ
+preplace netloc axi_gpio_0_GPIO 1 10 2 NJ 80 NJ
+preplace netloc axi_gpio_0_ip2intc_irpt 1 8 3 NJ 0 NJ 0 4920
+preplace netloc processing_system7_0_FCLK_CLK0 1 9 1 3970
+preplace netloc DDS|DDSclocking_0_spi_sclk 1 1 2 N 372 NJ
+preplace netloc FIR_x_out 1 6 1 2030
+preplace netloc shifter_1_data_out 1 2 1 NJ
+preplace netloc I_Dout 1 1 1 NJ
+preplace netloc DDSclocking_0_spi_sclk 1 10 1 4910
+preplace netloc DDS|S_AXI_1 1 0 1 4174
+preplace netloc DDS|dds_compiler_0_M_AXIS_DATA 1 2 1 4734
+preplace netloc DDS|Clk125_1 1 0 1 N
+preplace netloc DDS|s_axi_aclk_1 1 0 1 N
+preplace netloc DDS|s_axi_aresetn_1 1 0 1 4174
+preplace netloc CIC_data_out1 1 5 1 1440
+preplace netloc CIC_data_out 1 5 1 1430
+preplace netloc clk125mhz_1 1 4 7 1100 730 1450 730 2000 840 NJ 740 NJ 740 NJ 740 4880
+preplace netloc xlslice_0_Dout 1 4 1 NJ
+preplace netloc pmod_da2_0_spi_sclk 1 11 1 NJ
+levelinfo -pg 1 -10 110 340 590 990 1300 1870 2828 3240 3752 4244 5184 5400 -top -10 -bot 1150
+levelinfo -hier DDS * 4304 4584 *
+",
+}
+{
+   da_axi4_cnt: "3",
+   da_board_cnt: "2",
+   da_ps7_cnt: "1",
+}

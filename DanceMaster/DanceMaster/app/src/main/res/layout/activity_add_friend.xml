@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Description Text and Entry Text Field -->
+    <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+        android:layout_marginTop="@dimen/big_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ui_add_friend_text"
+        android:textSize="@dimen/header_font_size"
+        android:gravity="center_horizontal"/>
+
+    <com.dancemaster.dancemaster.FancyUI.GoodDogEditText
+        android:layout_marginTop="@dimen/giant_margin"
+        android:id="@+id/friend_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ui_enter_user_hint" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <com.dancemaster.dancemaster.FancyUI.GoodDogButton
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/flower_blue"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:onClick="onCancelClicked"
+            android:text="@string/cancel" />
+
+        <com.dancemaster.dancemaster.FancyUI.GoodDogButton
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/flower_blue"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:onClick="onAddFriendClicked"
+            android:text="@string/ui_follow_button" />
+
+    </LinearLayout>
+</LinearLayout>

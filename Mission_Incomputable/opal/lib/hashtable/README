@@ -1,0 +1,11 @@
+Compilation:
+	The program can either be compiled using the make file or using the following testing command:
+            gcc -Wall -pedantic -std=c11 -ggdb hashtable.c hashtabletest.c -o hashtabletest
+
+Execution:
+	For testing:
+	The program can be run like this: ./hashtabletest
+	Usage: ./hashtabletest
+
+Assumptions:
+	I assumed that the user mgiht pass NULL as the object, and as a result in every function I exit the function, doing my best to alert the user that I failed. I also assumed the user would choose a slot number that was apropriate for the number of items they want to insert.

@@ -1,0 +1,19 @@
+When testing this module I created a short program to add a static set of things into the bag, and extract them. The output of this is:
+
+     Successfully created a new bag
+     -----Inserting-----
+     After inserting
+     {
+     And CS50 is one of those things
+     Aren't what they seem
+     Lots of things
+     }
+     ----Extracting-----
+     Extracted And CS50 is one of those things
+     Extracted Aren't what they seem
+     Extracted Lots of things
+     Bag is empty
+
+In doing this I test that I can create a bag, add anything I want to into it, and extract them one by one in some order until the bag is empty.
+
+I also created a feature that would allow the user to type in things to add to the bag, and it would add them and promptly extract them to show order

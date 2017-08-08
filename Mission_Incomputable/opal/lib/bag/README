@@ -1,0 +1,12 @@
+Compilation:
+	The program can either be compiled using the make file or using the following testing command:
+	    gcc -Wall -pedantic -std=c11 -ggdb bag.c bagtest.c -o bagtest
+
+Execution:
+	For testing:
+	The program can then be run like this: ./bagtest
+	Usage: ./bagtest [-i]
+	Parameters: The -i will use the stdin as the input, and add each line to the bag
+
+Assumptions:
+	When writing the module, I assumed that user did not care in what order they receive objects back when the user is extracting them. I also assumed that they would want to use any kind of data, so I allowed them to give me any kind of data when putting things into the bag. Other than that I made few assumptions. If they choose to give me NULL as a bag, nothing will happen.

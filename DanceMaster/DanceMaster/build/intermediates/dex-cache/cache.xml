@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_763ef2b525acfcfc6b6007abb7f056cf3df612f2.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-jackson2/1.19.0/81dbf9795d387d5e80e55346582d5f2fb81a42eb/google-http-client-jackson2-1.19.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="81dbf9795d387d5e80e55346582d5f2fb81a42eb">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/google-http-client-jackson2-1.19.0_bcfd9f2ed956781290b8147156eee1692fbe33f8.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/.gradle/caches/modules-2/files-2.1/com.google.guava/guava-jdk5/13.0/381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7/guava-jdk5-13.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/guava-jdk5-13.0_816a905a81d4925d39d3e2926371ee582908c0a7.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.19.0/cdca49ad0977c040f603478aa2e16b2775c8fec6/google-http-client-1.19.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="cdca49ad0977c040f603478aa2e16b2775c8fec6">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/google-http-client-1.19.0_2b00f197fe26ffe1842ec5f2089ffb604cf267e9.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-android/1.19.0/e3f11020c2c812112803d252d1392872d3f619c8/google-http-client-android-1.19.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e3f11020c2c812112803d252d1392872d3f619c8">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/google-http-client-android-1.19.0_c68e7a6cac5aec41552380505efb35bd5c407660.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.soundcloud.android/android-crop/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="11a65cf2b30c192b38a881d626fa771a78a2293d">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.soundcloud.android-android-crop-1.0.1_d95c996a1b97a68fea0dc9b8eb1577bb774f21dc.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f81eecb8d5e9e548f75f277830a94a9b37fbb987">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0-beta1_a0e413076db556f15713b555096354001ed84122.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.4.0_eff441a7ee9ebfa0f9a488a40dc3644df78e83ea.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.19.0/d473a8962e14a707a3716637e4898bb2dd9643f2/google-oauth-client-1.19.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d473a8962e14a707a3716637e4898bb2dd9643f2">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/google-oauth-client-1.19.0_01c151de0ece90dae2142a586a42235db2ad5aa4.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client-android/1.19.0/ba2aafb867f6af469f936ae76426cf0a280094bd/google-api-client-android-1.19.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ba2aafb867f6af469f936ae76426cf0a280094bd">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/google-api-client-android-1.19.0_e6aaa80800aece5c3c87c2ed56f4fade2ce4e685.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="97f82fd0c185bd2881a93646954f2429be4baa86">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0-beta1_16c065275feb95844a430a1314be50433310cc2c.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/jsr305-1.3.9_95055d491cefed27a74a216d249349491c4a9f37.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-beta1/jars/libs/internal_impl-24.0.0-beta1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="23d564c059873f398dc5d967f56791a66472ce76">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-beta1_534ae71fc5f381fe7b893019185f09fea8d50640.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/backend/build/libs/backend-android-endpoints.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="09481e69fe01e2ea15f9267edf04e0d572146459">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/backend-android-endpoints_5bd45eaff5f8d09790a61781c16f4c1e0c0d273e.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6fd4eef51a55508bdf3f43f8ad96992e1da3850b">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.0.0-beta1_eda989c55b84f7f7ee94115ce5ed9f6674bb87fc.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="471ce760dbf7b784fd74892b5113bca4e0d8def7">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.0.0-beta1_070b6b560f02de2092fab982dc9bfab3659611cb.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/libs/YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/YouTubeAndroidPlayerApi_547df8668b09647cc7f105ecac3f8fcbc0ff9e78.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.1.3/f6c3aed1cdfa21b5c1737c915186ea93a95a58bd/jackson-core-2.1.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/jackson-core-2.1.3_bf6df48dc91d8da068e1cebda046e3a1458fed50.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.github.lecho/hellocharts-library/1.5.8/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="56c6a22c42588628903e9dda5d8f3aa1c1b4372f">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.github.lecho-hellocharts-library-1.5.8_a39a0f3dc2e9a764afc9be7f3e5f0346a40509ea.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-8.4.0_d750ee0ef903902b81ba1f736fab4426ebaa5ad6.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-measurement-8.4.0_64d0ecec9c50aa799a1f3bb9e3b40a91f3102224.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_96c8662345c0d3390c9e8b52ee1b416e61dfd489.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3c0208faf42864e6695345e64d1b955070263819">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0-beta1_99efc8a6256b3cf178c0f9de3876c00f2c396611.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-beta1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8d3137a71200c47974c0454ae8ad272a09c533eb">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0-beta1_0981f20615cabdf9ee2b8794dcfb60e76b2c2a22.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0-beta1/support-annotations-24.0.0-beta1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="04705c19cdec60364bc04e2e928c274da1ba301b">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0-beta1_05948e08b18015ff758752f13d05956e4a627642.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.19.0/6a21277d9bebe267b7ddee028b241eebc756c040/google-api-client-1.19.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6a21277d9bebe267b7ddee028b241eebc756c040">
+        <dex dex="/Users/Nick/Documents/cs65project/DanceMaster/DanceMaster/app/build/intermediates/pre-dexed/debug/google-api-client-1.19.0_33169367b958e461b5c6f61568f30326a83e9bed.jar" />
+    </item>
+
+</items>

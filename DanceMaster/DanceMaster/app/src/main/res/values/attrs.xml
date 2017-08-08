@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Taken from GitHub: https://github.com/hdodenhof/CircleImageView/blob/
+dd083c7e1157897e46d90c475013e3f8d983d1be/circleimageview/src/main/res/values/attrs.xml-->
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+</resources>

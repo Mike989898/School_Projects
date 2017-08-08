@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Array for the profile page -->
+    <string-array name="pick_photo_items">
+        <item>Take picture from camera</item>
+        <item>Select picture from gallery</item>
+    </string-array>
+</resources>

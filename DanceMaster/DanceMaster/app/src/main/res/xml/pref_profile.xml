@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/fab_margin"
+    android:paddingStart="@dimen/fab_margin"
+    android:paddingEnd="@dimen/fab_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.dancemaster.dancemaster.FancyUI.GoodDogTextViewPref
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/ui_profile_summary"
+        android:textSize="@dimen/header_font_size2"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/big_margin"/>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/results_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+            android:id="@+id/profile_picture_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_picture_label"
+            android:textSize="@dimen/header_font_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/small_margin"/>
+
+        <com.dancemaster.dancemaster.FancyUI.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/fab_margin"
+            app:civ_border_width="@dimen/profile_border_width"
+            app:civ_border_color="#F12DFF"/>
+
+        <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+            android:id="@+id/graph_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ui_progress_title"
+            android:textSize="@dimen/header_font_size"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" />
+
+        <!--Graph of progress over time-->
+        <lecho.lib.hellocharts.view.LineChartView
+            android:layout_marginTop="@dimen/fab_margin"
+            android:id="@+id/line_chart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/video_height"/>
+
+        <com.dancemaster.dancemaster.FancyUI.GoodDogTextView
+            android:id="@+id/no_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/header_font_size"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/table_margin"
+            android:layout_marginRight="@dimen/table_margin"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home_label" />
+        <item
+            android:id="@+id/nav_dances"
+            android:title="@string/dances_label" />
+        <item
+            android:id="@+id/nav_friends"
+            android:title="@string/friends_label" />
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/settings_label" />
+    </group>
+
+    <item
+        android:id="@+id/nav_about"
+        android:title="@string/about_label" />
+
+</menu>

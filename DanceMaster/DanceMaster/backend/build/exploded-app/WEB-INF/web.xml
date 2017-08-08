@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+    <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>checkUser</servlet-name>
+        <servlet-class>com.dancemaster.dancemaster.backend.CheckUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>checkUser</servlet-name>
+        <url-pattern>/checkUser.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addFriend</servlet-name>
+        <servlet-class>com.dancemaster.dancemaster.backend.AddFriendServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addFriend</servlet-name>
+        <url-pattern>/addFriend.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addPoints</servlet-name>
+        <servlet-class>com.dancemaster.dancemaster.backend.AddPointsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addPoints</servlet-name>
+        <url-pattern>/addPoints.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getData</servlet-name>
+        <servlet-class>com.dancemaster.dancemaster.backend.GetDataServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getData</servlet-name>
+        <url-pattern>/getData.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SystemServiceServlet</servlet-name>
+        <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+        <init-param>
+            <param-name>services</param-name>
+            <param-value>com.dancemaster.dancemaster.backend.RegistrationEndpoint,
+                com.dancemaster.dancemaster.backend.MessagingEndpoint
+            </param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SystemServiceServlet</servlet-name>
+        <url-pattern>/_ah/spi/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>main.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,46 @@
+{
+  "uuid": "aedf9e00-06d7-433c-98e0-1bb79422aa23",
+  "shortName": "mission",
+  "longName": "Mission Incomputable",
+  "companyName": "CS50Hackers!",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["basalt"], 
+  "enableMultiJS": true,
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "AppKeyJSReady": 0,
+    "AppKeySendMsg": 1,    
+    "AppKeyRecvMsg": 2,    
+    "AppKeyLocation": 3,
+    "AppKeyPebbleId": 4,
+    "AppKeySendError": 5
+  },
+  "resources": {
+    "media": [
+      {
+        "type": "png",
+        "name": "IMAGE_SPY",
+        "file": "images/Spy.png"
+      },
+      {
+      "type": "font",
+      "name": "FONT_PERFECT_DOS_24",
+      "file": "perfect-dos-vga.ttf"
+      },
+      {
+        "type": "font",
+        "name": "TERMINUS_FONT_20",
+        "file": "TerminusTTF.ttf"
+      }
+    ]
+  }, 
+  "capabilities": [ "location" ], 
+  "appjsDebug": "false", 
+  "proxyWSSServerURL": "wildcat.cs.dartmouth.edu", 
+  "proxyWSSServerPort": 34598, 
+  "targetServerURL": "flume.cs.dartmouth.edu", 
+  "targetServerPort": 10258
+}

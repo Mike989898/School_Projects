@@ -1,0 +1,1 @@
+Inproper number of arguments. Please input: pageDirectory indexFilename

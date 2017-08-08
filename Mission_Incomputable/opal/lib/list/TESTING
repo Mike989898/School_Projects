@@ -1,0 +1,24 @@
+In order to test the module, I created the listtest program. It adds items to the list one by one, and prints the result. I show that keys cannot be replaced, and indicate what happens when a user tries to find a key that does not exist. I also add and find an item with a very long key and data and one with no characters for a key. I prove that both work. The output:
+
+Created a list
+----Inserting-----
+Successfully inserted key 'Hello' with data 'there'
+Successfully inserted key 'How are thigns' with data 'in the real world?'
+Successfully inserted key 'apple' with data 'a nice red fruit'
+Successfully inserted key 'pomogranite' with data 'another nice red fruit'
+Successfully inserted key 'orange' with data 'a nice orange fruit'
+Failed to insert key 'orange' with data 'This is not supposed to work'
+Successfully inserted key 'This is a super long key that will test the edge cases and prove that really long strings can work very well' with data 'I am going to put in some even longer data to prove that I can put in as much stuff that I want into the the list, and not have something break.'
+Successfully inserted key '' with data 'this is short'
+----Finding-----
+Found the key 'orange' with data 'a nice orange fruit'
+Could not find the key 'pear'
+Found the key 'apple' with data 'a nice red fruit'
+Found the key 'Hello' with data 'there'
+Found the key 'How are thigns' with data 'in the real world?'
+Found the key 'pomogranite' with data 'another nice red fruit'
+Could not find the key 'grape'
+Found the key 'This is a super long key that will test the edge cases and prove that really long strings can work very well' with data 'I am going to put in some even longer data to prove that I can put in as much stuff that I want into the the list, and not have something break.'
+Found the key '' with data 'this is short'
+
+This shows I can insert any sort of data I want to, of any length (long or small), and a key of any length. I also showed that it will not allow the presence of duplicate keys, as the second time it tried to input value into key orange it fails to insert. Finally, when finding, I show that all the data is found that should exist, and for those keys I look for that I did not insert, like pear or grape, they were not found.
