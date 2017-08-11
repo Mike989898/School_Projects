@@ -2,7 +2,7 @@
 ## Chris Bertasi, Michael Kilgore, Andrew Laub
 ## May 2016
 
-##A Bit About The Project
+## A Bit About The Project
 This project is meant to be a spy simulation, where each team has a maximum of four spys attempting to capture beacon points placed around campus. There are three roles in this game: The field agent (spy carrying a pebble smart watch), the game server (hosted by a computer), and a guide agent (also hosted by a computer). 
 	
 Field agents on each team are sent update messages to their pebble smart watches about the status the game by the game server, and forwarded 'hint' messages from the guide agent by the game server. If a field agent discovers the location of an enemy field agent, they can activate a capture radius by pressing a button on their smart watch. Every enemy field agent within that radius will be sent a capture code, which they must share with enemy field agents attempting to capture them. Only the field agent who initiates the capture will be able to enter capture codes into their watch for an alloted time period. Once a field agent is captured, they are out of the game. Field agents can also enter in capture codes for beacons that they discover on campus. Capturing all the beacons ends the game.
